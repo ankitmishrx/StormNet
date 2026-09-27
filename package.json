@@ -1,0 +1,14 @@
+{
+  "name": "stormnet-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "web:dev": "npm --workspace=@stormnet/web run dev",
+    "web:build": "npm --workspace=@stormnet/web run build",
+    "web:lint": "npm --workspace=@stormnet/web run lint"
+  }
+}

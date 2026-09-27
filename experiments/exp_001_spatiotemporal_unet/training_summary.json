@@ -1,0 +1,46 @@
+{
+  "experiment_id": "exp_001_spatiotemporal_unet",
+  "model_architecture": "SpatiotemporalUNet",
+  "parameter_count": 525342,
+  "epochs_trained": 10,
+  "best_val_loss": 0.024063,
+  "total_training_duration_seconds": 5.41,
+  "training_history": {
+    "train_loss": [
+      0.238387,
+      0.191925,
+      0.158454,
+      0.127092,
+      0.098916,
+      0.07461,
+      0.055009,
+      0.040216,
+      0.029531,
+      0.022014
+    ],
+    "val_loss": [
+      0.235779,
+      0.200351,
+      0.192381,
+      0.094401,
+      0.085185,
+      0.07353,
+      0.04222,
+      0.031923,
+      0.029786,
+      0.024063
+    ]
+  },
+  "config": {
+    "model": "SpatiotemporalUNet",
+    "in_channels": 16,
+    "out_timesteps": 6,
+    "base_features": 24,
+    "batch_size": 4,
+    "learning_rate": 0.002,
+    "weight_decay": 1e-05,
+    "epochs": 10,
+    "seed": 42
+  },
+  "completed_at": "2026-09-26T17:12:24.705617+00:00"
+}

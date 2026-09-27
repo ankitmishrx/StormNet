@@ -1,0 +1,65 @@
+{
+  "source": "DEVELOPMENT_SAMPLE",
+  "is_sample": true,
+  "network_id": "IITM_NCR_LLN",
+  "network_name": "IITM Earth Networks Lightning Detection Network",
+  "timestamp": "2026-09-26T15:45:00Z",
+  "sector_id": "delhi-ncr",
+  "strikes": [
+    {
+      "id": "LTG-DEL-001",
+      "timestamp": "2026-09-26T10:11:12Z",
+      "latitude": 28.6341,
+      "longitude": 77.2195,
+      "type": "CG",
+      "peak_current_ka": -34.8,
+      "polarity": "NEGATIVE",
+      "sensors_participating": 7,
+      "chi_sq": 0.84
+    },
+    {
+      "id": "LTG-DEL-002",
+      "timestamp": "2026-09-26T10:12:04Z",
+      "latitude": 28.6315,
+      "longitude": 77.2162,
+      "type": "IC",
+      "peak_current_ka": 12.4,
+      "polarity": "POSITIVE",
+      "sensors_participating": 6,
+      "chi_sq": 0.92
+    },
+    {
+      "id": "LTG-DEL-003",
+      "timestamp": "2026-09-26T10:13:28Z",
+      "latitude": 28.6355,
+      "longitude": 77.2210,
+      "type": "CG",
+      "peak_current_ka": -48.2,
+      "polarity": "NEGATIVE",
+      "sensors_participating": 8,
+      "chi_sq": 0.65
+    },
+    {
+      "id": "LTG-DEL-004",
+      "timestamp": "2026-09-26T10:14:10Z",
+      "latitude": 28.6300,
+      "longitude": 77.1925,
+      "type": "CG",
+      "peak_current_ka": -26.5,
+      "polarity": "NEGATIVE",
+      "sensors_participating": 5,
+      "chi_sq": 1.12
+    },
+    {
+      "id": "LTG-DEL-005",
+      "timestamp": "2026-09-26T10:14:50Z",
+      "latitude": 28.4610,
+      "longitude": 77.0280,
+      "type": "IC",
+      "peak_current_ka": 18.0,
+      "polarity": "POSITIVE",
+      "sensors_participating": 6,
+      "chi_sq": 0.78
+    }
+  ]
+}

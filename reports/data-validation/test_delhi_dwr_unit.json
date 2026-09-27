@@ -1,0 +1,83 @@
+{
+  "dataset_id": "test_delhi_dwr_unit",
+  "dataset_path": "C:\\Users\\ankit\\AppData\\Local\\Temp\\tmp1d_9p1ta\\test_radar_scan.json",
+  "validated_at": "2026-09-26T18:31:39.395891+00:00",
+  "data_provenance": "SAMPLE_DATA",
+  "overall_status": "PASSED",
+  "pass_rate_pct": 100.0,
+  "total_checks": 8,
+  "passed_checks": 8,
+  "failed_checks": 0,
+  "warning_checks": 0,
+  "file_count": 1,
+  "total_bytes": 231,
+  "checks": [
+    {
+      "check_name": "file_integrity_check",
+      "status": "PASSED",
+      "details": "All 1 files are non-zero byte and readable.",
+      "metrics": {
+        "file_count": 1,
+        "total_bytes": 231
+      }
+    },
+    {
+      "check_name": "format_conformity_check",
+      "status": "PASSED",
+      "details": "File formats match recognized meteorological standards: ['.json'].",
+      "metrics": {}
+    },
+    {
+      "check_name": "timestamp_validity_check",
+      "status": "PASSED",
+      "details": "Extracted 1 valid observation timestamps.",
+      "metrics": {
+        "min_ts": "2026-09-26T12:00:00+00:00",
+        "max_ts": "2026-09-26T12:00:00+00:00"
+      }
+    },
+    {
+      "check_name": "temporal_gap_check",
+      "status": "PASSED",
+      "details": "Continuous temporal sequence without unlogged multi-hour gaps.",
+      "metrics": {}
+    },
+    {
+      "check_name": "geographic_bounding_check",
+      "status": "PASSED",
+      "details": "Observation bounds [28.60N, 77.20E to 28.60N, 77.20E] conform to Indian regional domain.",
+      "metrics": {
+        "min_lat": 28.6,
+        "max_lat": 28.6,
+        "min_lon": 77.2,
+        "max_lon": 77.2
+      }
+    },
+    {
+      "check_name": "crs_conformity_check",
+      "status": "PASSED",
+      "details": "CRS registered as 'EPSG:4326'.",
+      "metrics": {
+        "crs": "EPSG:4326"
+      }
+    },
+    {
+      "check_name": "physical_units_and_range_check",
+      "status": "PASSED",
+      "details": "All sampled physical parameters fall strictly within legitimate meteorological bounds.",
+      "metrics": {}
+    },
+    {
+      "check_name": "duplicate_detection_check",
+      "status": "PASSED",
+      "details": "Zero duplicate observation records detected.",
+      "metrics": {}
+    }
+  ],
+  "metadata": {
+    "variables_detected": [
+      "reflectivity_dbz"
+    ],
+    "inspected_files": 1
+  }
+}

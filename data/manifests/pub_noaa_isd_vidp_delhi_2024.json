@@ -1,0 +1,57 @@
+{
+  "dataset_id": "pub_noaa_isd_vidp_delhi_2024",
+  "provider": "NOAA NCEI",
+  "product": "Integrated Surface Database (ISD) Hourly",
+  "source_url": "",
+  "access_method": "DOWNLOAD",
+  "license": "US Government Open Data / Public Domain",
+  "provenance": "PUBLIC_REAL_DATA",
+  "variables": [
+    "liquid_precipitation_mm",
+    "dewpoint_celsius",
+    "wind_speed_mps",
+    "air_temperature_celsius",
+    "sea_level_pressure_hpa"
+  ],
+  "spatial_resolution": "3.0 km",
+  "temporal_resolution": "15 min",
+  "start_time": "2024-01-01T00:00:00",
+  "end_time": "2024-01-09T21:30:00",
+  "geographic_coverage": {
+    "min_lat": 28.5665,
+    "max_lat": 28.5665,
+    "min_lon": 77.103088,
+    "max_lon": 77.103088,
+    "crs": "EPSG:4326",
+    "path": "data\\external\\public\\station\\noaa_isd_vidp_delhi_2024.csv"
+  },
+  "file_count": 1,
+  "total_size": 7891387,
+  "checksum": "3982a30f3827492c85804beee4a4afd146b68808fd0c0e070dea56a371668205",
+  "download_timestamp": "2026-09-26T18:27:50.556333+00:00",
+  "validation_status": "WARNING",
+  "source": "NOAA_ISD",
+  "acquisition_date": "2026-09-26",
+  "observation_period": {
+    "start_time": "2024-01-01T00:00:00",
+    "end_time": "2024-01-09T21:30:00"
+  },
+  "format": "csv",
+  "access_status": "AUTHORIZED",
+  "license_status": "US Government Open Data / Public Domain",
+  "processing_version": "v1.0",
+  "data_provenance": "PUBLIC_REAL_DATA",
+  "file_manifest": [
+    {
+      "filename": "noaa_isd_vidp_delhi_2024.csv",
+      "relative_path": "noaa_isd_vidp_delhi_2024.csv",
+      "size_bytes": 7891387,
+      "sha256": "3982a30f3827492c85804beee4a4afd146b68808fd0c0e070dea56a371668205"
+    }
+  ],
+  "metadata": {
+    "validation_status": "WARNING",
+    "validation_pass_rate_pct": 62.5,
+    "original_path": "data\\external\\public\\station\\noaa_isd_vidp_delhi_2024.csv"
+  }
+}

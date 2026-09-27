@@ -1,0 +1,26 @@
+=== CSI (Threat Score) vs Forecast Horizon (Threshold >= 35 dBZ) ===
+  Persistence         : +15 min: 0.4774 -> +30 min: 0.2638
+  Optical Flow        : +15 min: 0.4200 -> +30 min: 0.2104
+  Spatiotemporal U-Net: +15 min: 0.6213 -> +30 min: 0.6576
+
+=== POD (Hit Rate) vs Forecast Horizon (Threshold >= 35 dBZ) ===
+  Persistence         : +15 min: 0.6459 -> +30 min: 0.4171
+  Optical Flow        : +15 min: 0.5973 -> +30 min: 0.3546
+  Spatiotemporal U-Net: +15 min: 0.9274 -> +30 min: 0.9616
+
+=== Convective Event Timeline & Embargo Split ===
+  [2026-07-01 12:00Z - 18:00Z] EPISODE-01 (Train)      ==================
+                                <48h Embargo>
+  [2026-07-03 12:00Z - 18:00Z] EPISODE-02 (Train)      ==================
+                                <48h Embargo>
+  [2026-07-05 12:00Z - 18:00Z] EPISODE-03 (Validation) ==================
+                                <48h Embargo>
+  [2026-07-07 12:00Z - 18:00Z] EPISODE-04 (Held-Out)   ==================
+
+=== Monitored Radar Station Coverage ===
+  1. DWR-DEL-SAF (Delhi Safdarjung) : [ACTIVE]   - 28.589°N, 77.217°E | Coverage: 250 km S-band
+  2. DWR-DEL-PAL (Delhi Palam)      : [OFFLINE]  - 28.563°N, 77.108°E | Archive Unmounted
+  3. DWR-MUM-VER (Mumbai Veravali)  : [OFFLINE]  - 19.124°N, 72.866°E | Archive Unmounted
+  4. DWR-CHE-PRT (Chennai Port)     : [OFFLINE]  - 13.084°N, 80.298°E | Archive Unmounted
+  5. DWR-KOL-SUB (Kolkata NSCB)     : [OFFLINE]  - 22.654°N, 88.447°E | Archive Unmounted
+

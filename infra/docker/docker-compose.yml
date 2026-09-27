@@ -1,0 +1,104 @@
+services:
+  # ============================================================================
+  # PostgreSQL + PostGIS (Spatial Database)
+  # ============================================================================
+  postgres:
+    image: postgis/postgis:16-3.4
+    container_name: stormnet-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-stormnet_db}
+      POSTGRES_USER: ${POSTGRES_USER:-stormnet_user}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-stormnet_secret_password}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./init-postgis.sql:/docker-entrypoint-initdb.d/init-postgis.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-stormnet_user} -d ${POSTGRES_DB:-stormnet_db}"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - stormnet-network
+
+  # ============================================================================
+  # Redis (Cache & Realtime In-Memory Broker)
+  # ============================================================================
+  redis:
+    image: redis:7-alpine
+    container_name: stormnet-redis
+    restart: unless-stopped
+    ports:
+      - "${REDIS_PORT:-6379}:6379"
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - stormnet-network
+
+  # ============================================================================
+  # FastAPI Application Backend
+  # ============================================================================
+  api:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.api
+    container_name: stormnet-api
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT:-development}
+      DEBUG: ${DEBUG:-true}
+      DATABASE_URL: postgresql://${POSTGRES_USER:-stormnet_user}:${POSTGRES_PASSWORD:-stormnet_secret_password}@postgres:5432/${POSTGRES_DB:-stormnet_db}
+      REDIS_URL: redis://redis:6379/0
+      API_HOST: 0.0.0.0
+      API_PORT: 8000
+    ports:
+      - "${API_PORT:-8000}:8000"
+    volumes:
+      - ../../apps/api:/app/apps/api
+      - ../../ml:/app/ml
+      - ../../packages:/app/packages
+      - ../../data:/app/data
+    networks:
+      - stormnet-network
+
+  # ============================================================================
+  # Next.js Application Frontend
+  # ============================================================================
+  web:
+    build:
+      context: ../..
+      dockerfile: infra/docker/Dockerfile.web
+    container_name: stormnet-web
+    restart: unless-stopped
+    depends_on:
+      - api
+    environment:
+      NEXT_PUBLIC_API_BASE_URL: http://localhost:8000/api/v1
+      NODE_ENV: ${NODE_ENV:-production}
+    ports:
+      - "3000:3000"
+    networks:
+      - stormnet-network
+
+volumes:
+  postgres_data:
+    name: stormnet_postgres_data
+  redis_data:
+    name: stormnet_redis_data
+
+networks:
+  stormnet-network:
+    name: stormnet-network
+    driver: bridge

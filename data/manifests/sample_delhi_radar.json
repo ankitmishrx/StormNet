@@ -1,0 +1,39 @@
+{
+  "dataset_id": "sample_delhi_radar",
+  "source": "IMD_DWR",
+  "provider": "IMD",
+  "product": "DWR_COMPOSITE",
+  "acquisition_date": "2026-09-26",
+  "observation_period": {
+    "start_time": "2026-09-26T10:15:00+00:00",
+    "end_time": "2026-09-26T10:15:00+00:00"
+  },
+  "geographic_coverage": {
+    "min_lat": 28.4324,
+    "max_lat": 28.9845,
+    "min_lon": 76.9995,
+    "max_lon": 77.7335,
+    "crs": "EPSG:4326",
+    "path": "data\\samples\\radar\\dwr_delhi_20260926_1545.json"
+  },
+  "file_count": 1,
+  "checksum": "fa689c545515066200ab8ef5c97116c43b5f487341e0916c0ec44ba7dcc08b75",
+  "format": "json",
+  "access_status": "AUTHORIZED",
+  "license_status": "IMD Academic MoU",
+  "processing_version": "v1.0",
+  "data_provenance": "SAMPLE_DATA",
+  "file_manifest": [
+    {
+      "filename": "dwr_delhi_20260926_1545.json",
+      "relative_path": "dwr_delhi_20260926_1545.json",
+      "size_bytes": 2839,
+      "sha256": "fa689c545515066200ab8ef5c97116c43b5f487341e0916c0ec44ba7dcc08b75"
+    }
+  ],
+  "metadata": {
+    "validation_status": "PASSED",
+    "validation_pass_rate_pct": 100.0,
+    "original_path": "data\\samples\\radar\\dwr_delhi_20260926_1545.json"
+  }
+}

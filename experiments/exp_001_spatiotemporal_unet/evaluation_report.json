@@ -1,0 +1,144 @@
+{
+  "experiment_id": "exp_001_spatiotemporal_unet",
+  "executed_at": "2026-09-26T17:12:25.181788+00:00",
+  "train_metadata": {
+    "experiment_id": "exp_001_spatiotemporal_unet",
+    "model_architecture": "SpatiotemporalUNet",
+    "parameter_count": 525342,
+    "epochs_trained": 10,
+    "best_val_loss": 0.024063,
+    "total_training_duration_seconds": 5.41,
+    "training_history": {
+      "train_loss": [
+        0.238387,
+        0.191925,
+        0.158454,
+        0.127092,
+        0.098916,
+        0.07461,
+        0.055009,
+        0.040216,
+        0.029531,
+        0.022014
+      ],
+      "val_loss": [
+        0.235779,
+        0.200351,
+        0.192381,
+        0.094401,
+        0.085185,
+        0.07353,
+        0.04222,
+        0.031923,
+        0.029786,
+        0.024063
+      ]
+    },
+    "config": {
+      "model": "SpatiotemporalUNet",
+      "in_channels": 16,
+      "out_timesteps": 6,
+      "base_features": 24,
+      "batch_size": 4,
+      "learning_rate": 0.002,
+      "weight_decay": 1e-05,
+      "epochs": 10,
+      "seed": 42
+    },
+    "completed_at": "2026-09-26T17:12:24.705617+00:00"
+  },
+  "splits": {
+    "train_episodes": [
+      "EPISODE-NCR-2026-07-01",
+      "EPISODE-NCR-2026-07-02"
+    ],
+    "val_episodes": [
+      "EPISODE-NCR-2026-07-03"
+    ],
+    "test_episodes": [
+      "EPISODE-NCR-2026-07-04"
+    ],
+    "embargo_hours": 24.0
+  },
+  "comparative_evaluation": {
+    "evaluation_metadata": {
+      "num_test_samples": 15,
+      "lead_times_minutes": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30
+      ],
+      "thresholds_evaluated": [
+        20.0,
+        35.0,
+        45.0
+      ]
+    },
+    "persistence_baseline": {
+      "mean_mae_dbz": 2.991,
+      "mean_rmse_dbz": 9.03,
+      "skill_scores": {
+        "threshold_20dbz": {
+          "csi": 0.0,
+          "pod": 0.0,
+          "far": 0.0
+        },
+        "threshold_35dbz": {
+          "csi": 0.0,
+          "pod": 0.0,
+          "far": 0.0
+        },
+        "threshold_45dbz": {
+          "csi": 0.0,
+          "pod": 0.0,
+          "far": 0.0
+        }
+      }
+    },
+    "optical_flow_baseline": {
+      "mean_mae_dbz": 2.992,
+      "mean_rmse_dbz": 9.033,
+      "skill_scores": {
+        "threshold_20dbz": {
+          "csi": 0.0,
+          "pod": 0.0,
+          "far": 0.0
+        },
+        "threshold_35dbz": {
+          "csi": 0.0,
+          "pod": 0.0,
+          "far": 0.0
+        },
+        "threshold_45dbz": {
+          "csi": 0.0,
+          "pod": 0.0,
+          "far": 0.0
+        }
+      }
+    },
+    "spatiotemporal_unet": {
+      "mean_mae_dbz": 10.926,
+      "mean_rmse_dbz": 11.371,
+      "skill_scores": {
+        "threshold_20dbz": {
+          "csi": 0.5586,
+          "pod": 0.997,
+          "far": 0.4399
+        },
+        "threshold_35dbz": {
+          "csi": 0.6642,
+          "pod": 0.9617,
+          "far": 0.3173
+        },
+        "threshold_45dbz": {
+          "csi": 0.5537,
+          "pod": 0.6543,
+          "far": 0.1643
+        }
+      }
+    }
+  }
+}

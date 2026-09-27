@@ -1,0 +1,83 @@
+{
+  "dataset_id": "sample_delhi_radar",
+  "dataset_path": "data\\samples\\radar\\dwr_delhi_20260926_1545.json",
+  "validated_at": "2026-09-26T18:03:29.513726+00:00",
+  "data_provenance": "SAMPLE_DATA",
+  "overall_status": "PASSED",
+  "pass_rate_pct": 100.0,
+  "total_checks": 8,
+  "passed_checks": 8,
+  "failed_checks": 0,
+  "warning_checks": 0,
+  "file_count": 1,
+  "total_bytes": 2839,
+  "checks": [
+    {
+      "check_name": "file_integrity_check",
+      "status": "PASSED",
+      "details": "All 1 files are non-zero byte and readable.",
+      "metrics": {
+        "file_count": 1,
+        "total_bytes": 2839
+      }
+    },
+    {
+      "check_name": "format_conformity_check",
+      "status": "PASSED",
+      "details": "File formats match recognized meteorological standards: ['.json'].",
+      "metrics": {}
+    },
+    {
+      "check_name": "timestamp_validity_check",
+      "status": "PASSED",
+      "details": "Extracted 1 valid observation timestamps.",
+      "metrics": {
+        "min_ts": "2026-09-26T10:15:00+00:00",
+        "max_ts": "2026-09-26T10:15:00+00:00"
+      }
+    },
+    {
+      "check_name": "temporal_gap_check",
+      "status": "PASSED",
+      "details": "Continuous temporal sequence without unlogged multi-hour gaps.",
+      "metrics": {}
+    },
+    {
+      "check_name": "geographic_bounding_check",
+      "status": "PASSED",
+      "details": "Observation bounds [28.43N, 77.00E to 28.98N, 77.73E] conform to Indian regional domain.",
+      "metrics": {
+        "min_lat": 28.4324,
+        "max_lat": 28.9845,
+        "min_lon": 76.9995,
+        "max_lon": 77.7335
+      }
+    },
+    {
+      "check_name": "crs_conformity_check",
+      "status": "PASSED",
+      "details": "CRS registered as 'EPSG:4326'.",
+      "metrics": {
+        "crs": "EPSG:4326"
+      }
+    },
+    {
+      "check_name": "physical_units_and_range_check",
+      "status": "PASSED",
+      "details": "All sampled physical parameters fall strictly within legitimate meteorological bounds.",
+      "metrics": {}
+    },
+    {
+      "check_name": "duplicate_detection_check",
+      "status": "PASSED",
+      "details": "Zero duplicate observation records detected.",
+      "metrics": {}
+    }
+  ],
+  "metadata": {
+    "variables_detected": [
+      "reflectivity_dbz"
+    ],
+    "inspected_files": 1
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "source": "DEVELOPMENT_SAMPLE",
+  "is_sample": true,
+  "network_id": "IMD_DELHI_AWS",
+  "network_name": "IMD Automatic Weather Station Network",
+  "timestamp": "2026-09-26T10:15:00Z",
+  "sector_id": "delhi-ncr",
+  "stations": [
+    {
+      "id": "AWS-DEL-SAF",
+      "name": "Safdarjung Observatory",
+      "latitude": 28.5847,
+      "longitude": 77.2069,
+      "elevation_m": 216.0,
+      "temperature_c": 34.2,
+      "humidity_pct": 74.5,
+      "pressure_hpa": 1004.2,
+      "wind_speed_kmh": 28.0,
+      "wind_direction_deg": 260.0,
+      "precipitation_rate_mmh": 14.5
+    },
+    {
+      "id": "AWS-DEL-PAL",
+      "name": "Palam Airport AWS",
+      "latitude": 28.5665,
+      "longitude": 77.1031,
+      "elevation_m": 225.0,
+      "temperature_c": 33.8,
+      "humidity_pct": 78.0,
+      "pressure_hpa": 1003.8,
+      "wind_speed_kmh": 34.5,
+      "wind_direction_deg": 275.0,
+      "precipitation_rate_mmh": 22.0
+    },
+    {
+      "id": "AWS-DEL-NOI",
+      "name": "Noida Sector 62 AWS",
+      "latitude": 28.6256,
+      "longitude": 77.3654,
+      "elevation_m": 204.0,
+      "temperature_c": 35.1,
+      "humidity_pct": 69.0,
+      "pressure_hpa": 1004.8,
+      "wind_speed_kmh": 18.0,
+      "wind_direction_deg": 250.0,
+      "precipitation_rate_mmh": 2.5
+    },
+    {
+      "id": "AWS-DEL-GUR",
+      "name": "Gurugram Cybercity AWS",
+      "latitude": 28.4950,
+      "longitude": 77.0890,
+      "elevation_m": 228.0,
+      "temperature_c": 33.2,
+      "humidity_pct": 81.0,
+      "pressure_hpa": 1003.5,
+      "wind_speed_kmh": 42.0,
+      "wind_direction_deg": 280.0,
+      "precipitation_rate_mmh": 36.0
+    }
+  ]
+}
